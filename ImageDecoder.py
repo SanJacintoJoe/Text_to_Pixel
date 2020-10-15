@@ -22,10 +22,8 @@ def decoder(encod_val, key):
 
 if __name__ == "__main__":
     image_location = input("Enter the location of the Image: ")
-    #binary_key = input("Enter Binary Key: ")
-
+    string_of_binary_key = input("Enter Binary Key: ")
+    binary_key = [int(x) for x in string_of_binary_key]
     img = Image.open(image_location)
     array_of_image = asarray(img)
-    #your going to need to hard code the binary key because I didn't have time to build in that functionality yet. 
-    #binary_key = [7, 7, 7, 7, 7, 6, 6, 7, 7, 6, 7, 6, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 6] 
     decoder(array_of_image, binary_key)
