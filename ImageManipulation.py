@@ -26,11 +26,3 @@ def split_message_into_char(message):
         chars.append(c)
     return chars
 
-def string2bits(s=''):
-    string_bits = ''
-    for x in s:
-        string_bits = string_bits + bin(ord(x))[2:].zfill(8)
-    return string_bits
-
-def bits2string(b=None):
-    return ''.join([chr(int(x, 2)) for x in b])
