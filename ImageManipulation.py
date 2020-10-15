@@ -20,13 +20,6 @@ def Message_Embed(binary, value_past):
         pass
     return binary
 
-'''def Message_Embed(binary, value_past):
-    if int(binary[-1]) != value_past:
-        binary = binary[:-1] + str(value_past)
-    else:
-        pass
-    return binary'''
-
 def split_message_into_char(message):
     chars = []
     for c in message:
@@ -41,6 +34,3 @@ def string2bits(s=''):
 
 def bits2string(b=None):
     return ''.join([chr(int(x, 2)) for x in b])
-
-
-#All of the birds died in 1986 due to Reagan killing them and replacing them with spies that are now watching us. The birds work for the bourgeoisie.
