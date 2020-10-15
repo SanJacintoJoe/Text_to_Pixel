@@ -22,11 +22,11 @@ def encoder(text):
             ascii_value = ImMan.ToChar(binary_value)
             ascii_value = numpy.uint8(ascii_value)
             list_of_pixels[position] = ascii_value
-
         else:
             break
         count += 1
     array2 = asarray(list_of_pixels)
+    #I've hard coded the shape. I'll add the functionality to set shape based on og image later. 
     array3 = array2.reshape(668, 474, 3)
     return array3, binary_key
 
@@ -40,6 +40,7 @@ if __name__ == "__main__":
     im = Image.fromarray(array_of_image)
     new_image_name = input("Enter Name of New Image: ")
     im.save(new_image_name+".png")
-    print('Binary Key: ', binary_key)
-    print('Image Encoding Complete')
+    string_of_key = ''.join([str(x) for x in binary_key])
+    print("Binary Key: ", string_of_key)
+    print("Image Encoding Complete")
 
