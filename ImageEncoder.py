@@ -14,6 +14,7 @@ def encoder(text):
             text_to_binary.append(y)
     size_of_text = len(text_to_binary)
     count = 0
+    shape_of_original_array = numpy.shape(array1)
     list_of_pixels = list(array1.flatten())
     for position, i in enumerate(list_of_pixels):
         if count < size_of_text:
@@ -26,8 +27,7 @@ def encoder(text):
             break
         count += 1
     array2 = asarray(list_of_pixels)
-    #I've hard coded the shape. I'll add the functionality to set shape based on og image later. 
-    array3 = array2.reshape(668, 474, 3)
+    array3 = numpy.reshape(array2, shape_of_original_array)
     return array3, binary_key
 
 
