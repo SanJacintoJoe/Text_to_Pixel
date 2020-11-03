@@ -3,6 +3,7 @@ import numpy
 from numpy import asarray
 import ImageManipulation as ImMan
 
+
 def encoder(text):
     text_to_binary = []
     binary_key = []
